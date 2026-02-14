@@ -38,9 +38,7 @@ export function Hero() {
         <div className={styles.mainArea}>
           <div className={styles.copy}>
             <h1 className={styles.title}>
-              {heroSection.title.split("\n").map((line) => (
-                <span key={line}>{line}</span>
-              ))}
+                <span >{heroSection.title}</span>
             </h1>
             <p className={styles.subtitle}>{heroSection.subtitle}</p>
             <div className={styles.actions}>

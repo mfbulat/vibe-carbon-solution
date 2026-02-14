@@ -20,9 +20,9 @@
   flex-direction: column;
   gap: 2px;
   font-family: "Sansation", Arial, sans-serif;
-  font-size: clamp(52px, 6.4vw, 118px);
-  line-height: 0.9;
-  text-transform: uppercase;
+  font-size: clamp(36px, 4.25vw, 78px);
+  line-height: 0.98;
+  font-weight: 700;
 }
 
 .ctaCircle {

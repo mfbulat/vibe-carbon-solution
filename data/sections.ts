@@ -35,10 +35,10 @@ export const heroSection = {
   customCtaButton: "Отправить запрос",
 };
 
-export const catalogSectionTitle = "КАТАЛОГ\nПРОДУКЦИИ";
+export const catalogSectionTitle = "Каталог\nпродукции";
 
 export const deliverySection = {
-  title: "ДОСТАВКА\nИ ОПЛАТА",
+  title: "Доставка\nи оплата",
   ctaLabel: "ЗАПОЛНИТЬ ЗАЯВКУ",
   ctaHref: "#contacts",
   rows: [
@@ -50,7 +50,7 @@ export const deliverySection = {
 };
 
 export const contactSection = {
-  title: "КОНТАКТЫ",
+  title: "Контакты",
   formTitle: "ОСТАЛИСЬ ВОПРОСЫ?",
   formSubtitle: "Заполните форму и мы свяжемся с вами в ближайшее время",
   email: "belyj.veterstocks@gmail.com",

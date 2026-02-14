@@ -29,9 +29,9 @@
 .title {
   margin: 0;
   font-family: "Sansation", Arial, sans-serif;
-  font-size: clamp(58px, 6.7vw, 124px);
-  line-height: 0.9;
-  text-transform: uppercase;
+  font-size: clamp(36px, 4.25vw, 78px);
+  line-height: 0.98;
+  font-weight: 700;
   color: #f4f8ff;
 }
 
