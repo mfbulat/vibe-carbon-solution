@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/vibe-carbon-solution",
-  assetPrefix: "/vibe-carbon-solution/",
+  basePath: isProd ? "/vibe-carbon-solution" : "",
+  assetPrefix: isProd ? "/vibe-carbon-solution/" : undefined,
   images: {
     unoptimized: true,
     remotePatterns: [

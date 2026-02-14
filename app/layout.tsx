@@ -19,8 +19,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const basePath = process.env.NODE_ENV === "production" ? "/vibe-carbon-solution" : "";
+
   return (
-    <html lang="ru">
+    <html lang="ru" style={{ ["--hero-bg-image" as string]: `url('${basePath}/hero-carbon-bg.png')` }}>
       <body>{children}</body>
     </html>
   );
