@@ -1,0 +1,21 @@
+.footer {
+  background: #000000;
+  color: #b9cbe2;
+  padding: 18px 0;
+  border-top: 1px solid rgba(206, 228, 255, 0.2);
+}
+
+.note {
+  margin: 0;
+  max-width: 90ch;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 6px;
+  color: #eaf3ff;
+  font-size: 13px;
+  text-decoration: underline;
+}

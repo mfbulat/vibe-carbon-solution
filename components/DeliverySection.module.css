@@ -1,0 +1,126 @@
+.section {
+  background-color: #000000;
+  color: #f3f8ff;
+  min-height: 100svh;
+  padding: clamp(60px, 8vw, 118px) 0 0;
+  border-top: 1px solid rgba(206, 228, 255, 0.18);
+  border-bottom: 1px solid rgba(206, 228, 255, 0.14);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: start;
+}
+
+.title {
+  margin: 0;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: "Sansation", Arial, sans-serif;
+  font-size: clamp(52px, 6.4vw, 118px);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.ctaCircle {
+  width: clamp(168px, 21vw, 352px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(238, 217, 156, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ctaCircle::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #eedf9d;
+}
+
+.ctaCircle span {
+  position: relative;
+  z-index: 1;
+  max-width: 8ch;
+  text-align: center;
+  font-family: var(--font-jost), Arial, sans-serif;
+  font-size: clamp(18px, 1.5vw, 30px);
+  line-height: 1.2;
+  color: #1b1b1b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tableWrap {
+  margin-top: clamp(32px, 4vw, 58px);
+  border-top: 1px solid rgba(206, 228, 255, 0.2);
+}
+
+.row {
+  min-height: clamp(74px, 7vw, 114px);
+  border-bottom: 1px solid rgba(206, 228, 255, 0.2);
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.row h3 {
+  margin: 0;
+  font-family: "Sansation", Arial, sans-serif;
+  font-size: clamp(35px, 2.25vw, 44px);
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.row p {
+  margin: 0;
+  font-size: clamp(18px, 1.3vw, 28px);
+  color: #d5e4f8;
+}
+
+.mediaAnchor {
+  margin-top: 1px;
+}
+
+.imageWrap {
+  margin: 24px auto 0;
+  position: relative;
+  width: min(980px, 100%);
+  aspect-ratio: 3 / 1.2;
+}
+
+.image {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media (max-width: 1200px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    padding: 10px 0;
+  }
+
+  .row h3 {
+    margin-top: 6px;
+  }
+
+  .row p {
+    margin-bottom: 6px;
+  }
+}

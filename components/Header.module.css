@@ -1,0 +1,112 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #050505;
+  border-top: 1px solid #3a3a3a;
+  border-bottom: 1px solid #171717;
+}
+
+.inner {
+  width: min(1420px, 100% - 42px);
+  margin: 0 auto;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff2bf;
+}
+
+.logoText {
+  font-size: 36px;
+  font-size: clamp(18px, 1.35vw, 30px);
+  font-family: var(--font-jost), Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.logoIcon {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #eedd9c;
+  border-radius: 50%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoIcon::before,
+.logoIcon::after {
+  content: "";
+  position: absolute;
+  background: #eedd9c;
+}
+
+.logoIcon::before {
+  width: 2px;
+  height: 9px;
+}
+
+.logoIcon::after {
+  width: 9px;
+  height: 2px;
+}
+
+.logoDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #eedd9c;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 48px;
+}
+
+.navLink {
+  font-family: var(--font-jost), Arial, sans-serif;
+  font-size: 29px;
+  font-size: clamp(13px, 0.95vw, 20px);
+  letter-spacing: 0.06em;
+  color: #f6f6f6;
+}
+
+@media (max-width: 1200px) {
+  .inner {
+    min-height: 58px;
+  }
+
+  .nav {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    width: min(1420px, 100% - 24px);
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 0;
+  }
+
+  .nav {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .logoIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
