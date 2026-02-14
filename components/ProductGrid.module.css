@@ -1,10 +1,10 @@
 .section {
-  background-color: #000000;
-  color: #e8f2ff;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   min-height: 100svh;
   padding: clamp(56px, 8vw, 128px) 0 clamp(54px, 7vw, 110px);
-  border-top: 1px solid rgba(206, 228, 255, 0.18);
-  border-bottom: 1px solid rgba(206, 228, 255, 0.14);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-soft);
 }
 
 .title {
@@ -12,12 +12,12 @@
   display: inline-flex;
   flex-direction: column;
   gap: 2px;
-  font-family: "Sansation", Arial, sans-serif;
-  font-size: clamp(36px, 4.25vw, 78px);
+  font-family: var(--font-sans);
+  font-size: var(--fs-4);
   line-height: 0.98;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #f4f8ff;
+  color: var(--color-text-strong);
 }
 
 .grid {
@@ -35,7 +35,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding-top: 42px;
+    padding-top: calc(var(--space-10) - var(--space-2));
   }
 
   .grid {
@@ -43,6 +43,6 @@
   }
 
   .title {
-    margin-bottom: 24px;
+    margin-bottom: var(--space-6);
   }
 }

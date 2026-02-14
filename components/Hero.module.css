@@ -2,12 +2,12 @@
   position: relative;
   overflow: hidden;
   min-height: 100svh;
-  background-color: #05070d;
-  background-image: url("/hero-carbon-bg.png");
+  background-color: var(--color-surface);
+  background-image: var(--hero-bg-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #f7f8fc;
+  color: var(--color-text);
   padding-bottom: clamp(22px, 2vw, 34px);
 }
 
@@ -15,7 +15,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(2, 6, 14, 0.36);
+  background: var(--hero-overlay-color);
   pointer-events: none;
 }
 
@@ -26,7 +26,7 @@
   display: grid;
   grid-template-columns: auto auto 1fr auto auto;
   align-items: center;
-  gap: 20px;
+  gap: var(--space-5);
 }
 
 .brand {
@@ -36,31 +36,31 @@
 
 .brandMark {
   display: inline-flex;
-  gap: 4px;
+  gap: var(--space-1);
 }
 
 .brandMark span {
   width: 17px;
   height: 8px;
-  background: linear-gradient(130deg, #f2f6ff 0%, #9ab6d8 100%);
+  background: linear-gradient(130deg, var(--color-text-strong) 0%, var(--color-muted) 100%);
   transform: skewX(-32deg);
 }
 
 .menu,
 .menuRight {
   display: inline-flex;
-  gap: 18px;
+  gap: var(--space-5);
   align-items: center;
 }
 
 .menu {
-  padding-left: 8px;
+  padding-left: var(--space-2);
 }
 
 .menu a,
 .menuRight a {
-  color: rgba(243, 248, 255, 0.9);
-  font-size: clamp(12px, 0.84vw, 16px);
+  color: var(--color-text);
+  font-size: var(--fs-1);
   letter-spacing: 0.02em;
 }
 
@@ -79,12 +79,12 @@
 .topButton {
   justify-self: end;
   min-height: 42px;
-  padding: 0 28px;
-  color: #deecff;
-  --btn-border: rgba(138, 194, 255, 0.7);
-  --btn-bg: linear-gradient(120deg, #0f4a95 0%, #1b67bf 50%, #11498f 100%);
-  --btn-bg-hover: linear-gradient(120deg, #1152a6 0%, #2675cd 50%, #1557a8 100%);
-  font-size: clamp(12px, 0.9vw, 16px);
+  padding: 0 var(--space-7);
+  color: var(--color-text);
+  --btn-border: var(--color-border-primary);
+  --btn-bg: var(--gradient-top-button);
+  --btn-bg-hover: var(--gradient-top-button-hover);
+  font-size: var(--fs-1);
   font-weight: 700;
 }
 
@@ -96,7 +96,7 @@
   grid-template-columns: 1fr 1fr;
   gap: clamp(18px, 3vw, 46px);
   align-items: center;
-  padding: clamp(26px, 2.5vw, 42px) 0 18px;
+  padding: clamp(26px, 2.5vw, 42px) 0 var(--space-5);
 }
 
 .copy {
@@ -108,53 +108,53 @@
   /*display: inline-flex;*/
   flex-direction: column;
   /*gap: 2px;*/
-  color: #f5f7fd;
-  font-size: clamp(36px, 4.25vw, 78px);
+  color: var(--color-text);
+  font-size: var(--fs-4);
   line-height: 0.98;
   font-weight: 700;
 }
 
 .subtitle {
-  margin: 16px 0 0;
-  color: #c3d2e8;
-  font-size: clamp(16px, 1.3vw, 24px);
+  margin: var(--space-4) 0 0;
+  color: var(--color-text-soft);
+  font-size: var(--fs-3);
 }
 
 .actions {
-  margin-top: 22px;
+  margin-top: var(--space-5);
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--space-3);
 }
 
 .primaryButton,
 .secondaryButton {
   min-height: 44px;
-  padding: 0 34px;
-  font-size: clamp(14px, 0.95vw, 18px);
+  padding: 0 calc(var(--space-8) + var(--space-1));
+  font-size: var(--fs-2);
   font-weight: 700;
 }
 
 .primaryButton {
-  color: #eff6ff;
-  --btn-border: rgba(116, 185, 255, 0.9);
-  --btn-bg: linear-gradient(118deg, #0f58b4 0%, #1174ea 55%, #0f4da0 100%);
-  --btn-bg-hover: linear-gradient(118deg, #1462c7 0%, #2a83f5 55%, #145dbf 100%);
+  color: var(--color-text);
+  --btn-border: var(--color-border-primary);
+  --btn-bg: var(--gradient-primary);
+  --btn-bg-hover: var(--gradient-primary-hover);
 }
 
 .secondaryButton {
-  color: #eaf2fe;
-  --btn-border: rgba(225, 236, 252, 0.45);
-  --btn-bg: rgba(6, 10, 18, 0.78);
-  --btn-bg-hover: rgba(18, 24, 38, 0.86);
+  color: var(--color-text);
+  --btn-border: var(--btn-border-default);
+  --btn-bg: var(--btn-bg-default);
+  --btn-bg-hover: var(--btn-bg-hover-default);
 }
 
 .heroVisual {
   position: relative;
   width: 100%;
   aspect-ratio: 1.52 / 0.78;
-  border: 1px solid rgba(162, 191, 226, 0.24);
-  background: radial-gradient(130% 120% at 50% 50%, rgba(99, 124, 157, 0.22), transparent 72%);
+  border: 1px solid var(--color-border);
+  background: radial-gradient(130% 120% at 50% 50%, var(--color-border-soft), transparent 72%);
 }
 
 .heroVisualImage {
@@ -167,11 +167,11 @@
 .block {
   position: relative;
   z-index: 5;
-  border: 1px solid rgba(206, 228, 255, 0.28);
+  border: 1px solid var(--color-border-strong);
   border-top: 0;
   background:
-    radial-gradient(110% 180% at 70% 30%, rgba(88, 120, 168, 0.18), transparent 62%),
-    linear-gradient(180deg, rgba(6, 11, 20, 0.95) 0%, rgba(7, 11, 19, 0.82) 100%);
+    radial-gradient(110% 180% at 70% 30%, var(--color-border-soft), transparent 62%),
+    var(--gradient-surface);
 }
 
 .block::before {
@@ -179,21 +179,11 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.02) 0,
-      rgba(255, 255, 255, 0.02) 10px,
-      rgba(0, 0, 0, 0.04) 10px,
-      rgba(0, 0, 0, 0.04) 20px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(255, 255, 255, 0.015) 0,
-      rgba(255, 255, 255, 0.015) 10px,
-      rgba(0, 0, 0, 0.04) 10px,
-      rgba(0, 0, 0, 0.04) 20px
-    );
+  background-image: linear-gradient(
+    180deg,
+    transparent 0,
+    var(--color-border-soft) 100%
+  );
   opacity: 0.5;
 }
 
@@ -201,8 +191,8 @@
   margin: 0;
   position: relative;
   z-index: 1;
-  padding: 16px 20px;
-  border-bottom: 1px solid rgba(206, 228, 255, 0.2);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
   font-size: clamp(46px, 2.7vw, 74px);
   letter-spacing: 0.01em;
   font-weight: 700;
@@ -216,16 +206,16 @@
 }
 
 .reasonCard {
-  padding: 18px 22px 20px;
+  padding: var(--space-5) var(--space-5) var(--space-5);
   min-height: 156px;
   display: grid;
   grid-template-columns: 26px 1fr;
-  gap: 12px;
+  gap: var(--space-3);
   align-items: start;
 }
 
 .reasonCard + .reasonCard {
-  border-left: 1px solid rgba(206, 228, 255, 0.14);
+  border-left: 1px solid var(--color-border-soft);
 }
 
 .reasonIcon {
@@ -234,14 +224,14 @@
   justify-content: center;
   width: 26px;
   height: 26px;
-  color: #cfdef3;
-  font-size: 17px;
-  text-shadow: 0 0 8px rgba(166, 199, 235, 0.22);
+  color: var(--color-text-soft);
+  font-size: var(--fs-2);
+  text-shadow: var(--shadow-sm);
 }
 
 .reasonValue {
   margin: 0;
-  color: #f3f8ff;
+  color: var(--color-text);
   font-size: clamp(56px, 3.7vw, 92px);
   line-height: 1;
   font-weight: 700;
@@ -249,22 +239,22 @@
 }
 
 .reasonLabel {
-  margin: 8px 0 0;
-  color: #d4e1f2;
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-soft);
   font-size: clamp(27px, 1.65vw, 42px);
   line-height: 1.1;
 }
 
 .previewGrid {
-  padding: 14px;
+  padding: var(--space-3);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: var(--space-3);
 }
 
 .previewCard {
-  border: 1px solid rgba(174, 199, 228, 0.2);
-  background: rgba(7, 11, 20, 0.88);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
 }
 
 .previewImageWrap {
@@ -280,62 +270,62 @@
 
 .previewFooter {
   min-height: 48px;
-  padding: 8px 10px;
+  padding: var(--space-2) var(--space-3);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .previewFooter h3 {
   margin: 0;
   font-size: clamp(15px, 1.08vw, 19px);
-  color: #f0f6ff;
+  color: var(--color-text);
   line-height: 1.1;
 }
 
 .previewFooter a {
   min-height: 26px;
-  padding: 0 10px;
-  border: 1px solid rgba(170, 200, 236, 0.34);
-  color: #e8f1ff;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border-primary);
+  color: var(--color-text);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: var(--fs-1);
   white-space: nowrap;
 }
 
 .bottomCta {
   position: relative;
   z-index: 5;
-  margin-top: 10px;
-  border: 1px solid rgba(196, 220, 248, 0.26);
+  margin-top: var(--space-3);
+  border: 1px solid var(--color-border);
   min-height: 74px;
-  padding: 12px 18px;
+  padding: var(--space-3) var(--space-5);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(120deg, rgba(7, 11, 20, 0.8) 0%, rgba(8, 13, 24, 0.9) 100%);
+  gap: var(--space-5);
+  background: var(--gradient-surface);
 }
 
 .bottomCta p {
   margin: 0;
   font-size: clamp(22px, 2.2vw, 42px);
-  color: #f7fbff;
+  color: var(--color-text-strong);
 }
 
 .bottomCta a {
   min-height: 44px;
-  padding: 0 30px;
-  border: 1px solid rgba(116, 185, 255, 0.8);
-  background: linear-gradient(118deg, #0f58b4 0%, #1174ea 55%, #0f4da0 100%);
-  color: #eff6ff;
+  padding: 0 var(--space-8);
+  border: 1px solid var(--color-border-primary);
+  background: var(--gradient-primary);
+  color: var(--color-text);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(13px, 0.92vw, 16px);
+  font-size: var(--fs-1);
   font-weight: 700;
   white-space: nowrap;
 }
@@ -343,7 +333,7 @@
 @media (max-width: 1300px) {
   .topBar {
     grid-template-columns: auto 1fr auto;
-    gap: 12px;
+    gap: var(--space-3);
   }
 
   .menu {
@@ -384,7 +374,7 @@
 
   .menu {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: var(--space-3);
   }
 
   .menu a + a {
@@ -398,7 +388,7 @@
 
   .reasonCard {
     min-height: 118px;
-    padding: 14px 16px 16px;
+    padding: var(--space-3) var(--space-4) var(--space-4);
   }
 
   .reasonValue {
@@ -421,7 +411,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding-bottom: 18px;
+    padding-bottom: var(--space-5);
   }
 
   .reasons,

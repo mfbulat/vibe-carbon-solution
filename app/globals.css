@@ -1,11 +1,6 @@
 @import "@fontsource/sansation/400.css";
 @import "@fontsource/sansation/700.css";
-
-:root {
-  --color-bg: #000000;
-  --color-text: #111111;
-  --color-accent: #f0cf52;
-}
+@import "../styles/tokens.css";
 
 * {
   box-sizing: border-box;
@@ -19,17 +14,17 @@ body {
 }
 
 body {
-  font-family: "Sansation", Arial, sans-serif;
+  font-family: var(--font-sans);
   background: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.4;
+  line-height: var(--lh-base);
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-family: "Sansation", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 600;
 }
 
@@ -39,15 +34,15 @@ a {
 }
 
 .container {
-  width: min(1420px, 100% - 40px);
+  width: min(var(--container-max), 100% - var(--container-gutter));
   margin: 0 auto;
 }
 
 .btn-angled {
-  --btn-cut: 16px;
-  --btn-border: rgba(225, 236, 252, 0.45);
-  --btn-bg: rgba(6, 10, 18, 0.78);
-  --btn-bg-hover: var(--btn-bg);
+  --btn-cut-current: var(--btn-cut);
+  --btn-border-current: var(--btn-border);
+  --btn-bg-current: var(--btn-bg);
+  --btn-bg-hover-current: var(--btn-bg-hover);
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -62,29 +57,34 @@ a {
 .btn-angled::after {
   content: "";
   position: absolute;
-  clip-path: polygon(var(--btn-cut) 0, 100% 0, calc(100% - var(--btn-cut)) 100%, 0 100%);
+  clip-path: polygon(
+    var(--btn-cut-current) 0,
+    100% 0,
+    calc(100% - var(--btn-cut-current)) 100%,
+    0 100%
+  );
   pointer-events: none;
 }
 
 .btn-angled::before {
   inset: 0;
   z-index: -2;
-  background: var(--btn-border);
+  background: var(--btn-border-current);
 }
 
 .btn-angled::after {
   inset: 1px;
   z-index: -1;
-  background: var(--btn-bg);
+  background: var(--btn-bg-current);
   transition: background 180ms ease;
 }
 
 .btn-angled:hover::after {
-  background: var(--btn-bg-hover);
+  background: var(--btn-bg-hover-current);
 }
 
 @media (max-width: 768px) {
   .container {
-    width: min(1420px, 100% - 24px);
+    width: min(var(--container-max), 100% - var(--container-gutter-mobile));
   }
 }

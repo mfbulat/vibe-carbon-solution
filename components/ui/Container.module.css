@@ -1,0 +1,10 @@
+.container {
+  width: min(var(--container-max), 100% - var(--container-gutter));
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(var(--container-max), 100% - var(--container-gutter-mobile));
+  }
+}

@@ -1,0 +1,88 @@
+:root {
+  /* Colors */
+  --color-bg: #000000;
+  --color-surface: #070b14;
+  --color-surface-elevated: #0b1220;
+  --color-surface-soft: #0f1a2c;
+  --color-text: #f3f8ff;
+  --color-muted: #a8bdd9;
+  --color-border: rgba(206, 228, 255, 0.2);
+  --color-primary: #1174ea;
+  --color-primary-hover: #2a83f5;
+  --color-accent: #eedf9d;
+  --color-danger: #d14d57;
+  --color-success: #2a9d63;
+
+  --color-text-strong: #f7fbff;
+  --color-text-soft: #d5e5fb;
+  --color-text-contrast: #1b1b1b;
+  --color-link: #eaf3ff;
+
+  --color-border-soft: rgba(206, 228, 255, 0.14);
+  --color-border-strong: rgba(206, 228, 255, 0.28);
+  --color-border-primary: rgba(116, 185, 255, 0.85);
+  --color-border-accent: rgba(238, 217, 156, 0.42);
+
+  --gradient-primary: linear-gradient(118deg, #0f58b4 0%, #1174ea 55%, #0f4da0 100%);
+  --gradient-primary-hover: linear-gradient(118deg, #1462c7 0%, #2a83f5 55%, #145dbf 100%);
+  --gradient-top-button: linear-gradient(120deg, #0f4a95 0%, #1b67bf 50%, #11498f 100%);
+  --gradient-top-button-hover: linear-gradient(120deg, #1152a6 0%, #2675cd 50%, #1557a8 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(8, 13, 24, 0.92) 0%, rgba(4, 8, 16, 0.9) 100%);
+  --gradient-surface-soft: linear-gradient(180deg, rgba(8, 13, 24, 0.55) 0%, rgba(6, 10, 18, 0.75) 100%);
+
+  /* Hero */
+  --hero-bg-image: url('/hero-carbon-bg.png');
+  --hero-overlay-color: rgba(2, 6, 14, 0.36);
+
+  /* Typography */
+  --font-sans: "Sansation", Arial, sans-serif;
+  --fs-1: clamp(12px, 0.84vw, 16px);
+  --fs-2: clamp(14px, 0.95vw, 18px);
+  --fs-3: clamp(16px, 1.3vw, 24px);
+  --fs-4: clamp(36px, 4.25vw, 78px);
+  --fs-title-md: clamp(20px, 1.55vw, 32px);
+  --fs-title-sm: clamp(18px, 1.2vw, 22px);
+  --fs-body-sm: clamp(13px, 0.95vw, 17px);
+  --fs-body-md: clamp(15px, 1.05vw, 20px);
+  --fs-price: clamp(30px, 2.2vw, 40px);
+  --lh-base: 1.4;
+
+  /* Spacing (4px scale) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 56px;
+  --space-12: 64px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-round: 50%;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-inset-border: inset 0 -1px 0 rgba(190, 216, 246, 0.35);
+
+  /* Layout */
+  --container-max: 1420px;
+  --container-gutter: 40px;
+  --container-gutter-mobile: 24px;
+
+  /* Controls */
+  --btn-cut: 16px;
+  --btn-border: rgba(225, 236, 252, 0.45);
+  --btn-bg: rgba(6, 10, 18, 0.78);
+  --btn-bg-hover: rgba(18, 24, 38, 0.86);
+  --btn-border-default: var(--btn-border);
+  --btn-bg-default: var(--btn-bg);
+  --btn-bg-hover-default: var(--btn-bg-hover);
+}

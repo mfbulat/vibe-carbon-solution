@@ -1,16 +1,16 @@
 .section {
-  background-color: #000000;
-  color: #f3f8ff;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   min-height: 100svh;
   padding: clamp(60px, 8vw, 118px) 0 0;
-  border-top: 1px solid rgba(206, 228, 255, 0.18);
-  border-bottom: 1px solid rgba(206, 228, 255, 0.14);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-soft);
 }
 
 .head {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 20px;
+  gap: var(--space-5);
   align-items: start;
 }
 
@@ -18,9 +18,9 @@
   margin: 0;
   display: inline-flex;
   flex-direction: column;
-  gap: 2px;
-  font-family: "Sansation", Arial, sans-serif;
-  font-size: clamp(36px, 4.25vw, 78px);
+  gap: var(--space-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-4);
   line-height: 0.98;
   font-weight: 700;
 }
@@ -28,8 +28,8 @@
 .ctaCircle {
   width: clamp(168px, 21vw, 352px);
   aspect-ratio: 1;
-  border-radius: 50%;
-  border: 1px solid rgba(238, 217, 156, 0.42);
+  border-radius: var(--radius-round);
+  border: 1px solid var(--color-border-accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,8 +41,8 @@
   position: absolute;
   width: 70%;
   aspect-ratio: 1;
-  border-radius: 50%;
-  background: #eedf9d;
+  border-radius: var(--radius-round);
+  background: var(--color-accent);
 }
 
 .ctaCircle span {
@@ -50,31 +50,31 @@
   z-index: 1;
   max-width: 8ch;
   text-align: center;
-  font-family: var(--font-jost), Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(18px, 1.5vw, 30px);
   line-height: 1.2;
-  color: #1b1b1b;
+  color: var(--color-text-contrast);
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .tableWrap {
   margin-top: clamp(32px, 4vw, 58px);
-  border-top: 1px solid rgba(206, 228, 255, 0.2);
+  border-top: 1px solid var(--color-border);
 }
 
 .row {
   min-height: clamp(74px, 7vw, 114px);
-  border-bottom: 1px solid rgba(206, 228, 255, 0.2);
+  border-bottom: 1px solid var(--color-border);
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .row h3 {
   margin: 0;
-  font-family: "Sansation", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(35px, 2.25vw, 44px);
   line-height: 1;
   font-weight: 500;
@@ -84,7 +84,7 @@
 .row p {
   margin: 0;
   font-size: clamp(18px, 1.3vw, 28px);
-  color: #d5e4f8;
+  color: var(--color-text-soft);
 }
 
 .mediaAnchor {
@@ -92,7 +92,7 @@
 }
 
 .imageWrap {
-  margin: 24px auto 0;
+  margin: var(--space-6) auto 0;
   position: relative;
   width: min(980px, 100%);
   aspect-ratio: 3 / 1.2;

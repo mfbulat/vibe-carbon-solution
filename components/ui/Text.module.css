@@ -1,0 +1,21 @@
+.text {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: var(--lh-base);
+}
+
+.body {
+  font-size: var(--fs-3);
+}
+
+.muted {
+  color: var(--color-muted);
+  font-size: var(--fs-body-sm);
+}
+
+.title {
+  font-size: var(--fs-4);
+  line-height: 0.98;
+  font-weight: 700;
+}
