@@ -1,16 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { findProductBySlug, type Product } from "@/data/products";
+import { findProductBySlug, getProductSlugFromHref, products, type Product } from "@/data/products";
 import styles from "./page.module.css";
 
 type ProductPageProps = {
-  params: Promise<{
+  params: {
     slug: string[];
-  }>;
+  };
 };
 
 const priceFormatter = new Intl.NumberFormat("ru-RU");
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return products.map((product) => ({
+    slug: getProductSlugFromHref(product.href).split("/"),
+  }));
+}
 
 function ProductInfo({ product }: { product: Product }) {
   return (
@@ -29,9 +36,13 @@ function ProductInfo({ product }: { product: Product }) {
   );
 }
 
-export default async function ProductPage({ params }: ProductPageProps) {
-  const resolvedParams = await params;
-  const slug = resolvedParams.slug.join("/");
+export default function ProductPage({ params }: ProductPageProps) {
+  const slug = Array.isArray(params.slug) ? params.slug.join("/") : "";
+
+  if (!slug) {
+    notFound();
+  }
+
   const product = findProductBySlug(slug);
 
   if (!product) {

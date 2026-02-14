@@ -63,3 +63,12 @@ npm run dev
 npm run lint
 npm run build
 ```
+
+## Deploy to GitHub Pages
+
+1. В GitHub откройте `Settings → Pages`.
+2. В `Source` выберите `GitHub Actions`.
+3. После каждого push в ветку `main` деплой запускается автоматически workflow-файлом `.github/workflows/pages.yml`.
+
+Итоговый URL проекта:
+[https://mfbulat.github.io/vibe-carbon-solution/](https://mfbulat.github.io/vibe-carbon-solution/)
