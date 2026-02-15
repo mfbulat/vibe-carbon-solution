@@ -1,7 +1,8 @@
 .section {
   background-color: var(--color-bg);
   color: var(--color-text);
-  min-height: 100svh;
+  min-height: 100vh;
+  min-height: 100dvh;
   padding: clamp(60px, 8vw, 118px) 0 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border-soft);
@@ -107,9 +108,17 @@
   .head {
     grid-template-columns: 1fr;
   }
+
+  .ctaCircle {
+    width: clamp(148px, 28vw, 220px);
+  }
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: clamp(48px, 7vw, 88px) 0 0;
+  }
+
   .row {
     grid-template-columns: minmax(0, 1fr);
     align-content: center;
@@ -122,5 +131,20 @@
 
   .row p {
     margin-bottom: 6px;
+  }
+
+  .imageWrap {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(28px, 9vw, 40px);
+  }
+
+  .ctaCircle {
+    width: 140px;
   }
 }

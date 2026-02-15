@@ -1,0 +1,5 @@
+/* Debug helper for overflow checks. Keep import disabled by default.
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+}
+*/

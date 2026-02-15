@@ -17,6 +17,7 @@
   --color-text-soft: #d5e5fb;
   --color-text-contrast: #1b1b1b;
   --color-link: #eaf3ff;
+  --color-backdrop: rgba(0, 0, 0, 0.4);
 
   --color-border-soft: rgba(206, 228, 255, 0.14);
   --color-border-strong: rgba(206, 228, 255, 0.28);
@@ -46,6 +47,8 @@
   --fs-body-md: clamp(15px, 1.05vw, 20px);
   --fs-price: clamp(30px, 2.2vw, 40px);
   --lh-base: 1.4;
+  --lh-tight: 1.1;
+  --lh-heading: 0.98;
 
   /* Spacing (4px scale) */
   --space-1: 4px;
@@ -60,6 +63,8 @@
   --space-10: 48px;
   --space-11: 56px;
   --space-12: 64px;
+  --space-13: 72px;
+  --space-14: 80px;
 
   /* Radius */
   --radius-sm: 4px;
@@ -72,10 +77,27 @@
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
   --shadow-inset-border: inset 0 -1px 0 rgba(190, 216, 246, 0.35);
 
+  /* Motion */
+  --motion-duration-md: 280ms;
+  --motion-ease: ease;
+
   /* Layout */
   --container-max: 1420px;
   --container-gutter: 40px;
   --container-gutter-mobile: 24px;
+  --container-gutter-sm: 16px;
+  --container-gutter-md: 24px;
+  --container-gutter-lg: 32px;
+
+  /* Breakpoints (cannot be used directly in @media) */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+  /* media constants:
+     sm: 480px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px
+  */
 
   /* Controls */
   --btn-cut: 16px;
@@ -85,4 +107,8 @@
   --btn-border-default: var(--btn-border);
   --btn-bg-default: var(--btn-bg);
   --btn-bg-hover-default: var(--btn-bg-hover);
+
+  --size-burger: 44px;
+  --size-burger-line-w: 18px;
+  --size-burger-line-h: 2px;
 }

@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { deliverySection } from "@/data/sections";
+import { Container } from "@/components/ui";
 import styles from "./DeliverySection.module.css";
 
 export function DeliverySection() {
   return (
     <section className={styles.section} id="delivery">
-      <div className="container">
+      <Container>
         <div className={styles.head}>
           <h2 className={styles.title}>
             {deliverySection.title.split("\n").map((line) => (
@@ -37,7 +38,7 @@ export function DeliverySection() {
             className={styles.image}
           />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

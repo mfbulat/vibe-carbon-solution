@@ -1,10 +1,11 @@
 import { contactSection } from "@/data/sections";
+import { Container } from "@/components/ui";
 import styles from "./ContactSection.module.css";
 
 export function ContactSection() {
   return (
     <section className={styles.section} id="contacts">
-      <div className="container">
+      <Container>
         <h2 className={styles.title}>{contactSection.title}</h2>
 
         <div className={styles.columns}>
@@ -28,7 +29,7 @@ export function ContactSection() {
             </p>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

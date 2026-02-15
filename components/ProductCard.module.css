@@ -6,6 +6,7 @@
   background: var(--gradient-surface), var(--hero-bg-image);
   background-size: cover;
   overflow: hidden;
+  min-height: clamp(320px, 42vw, 520px);
 }
 
 .card::after {
@@ -44,11 +45,12 @@
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   z-index: 1;
   transition: transform 220ms ease;
-  filter: brightness(0.72) contrast(1.08) saturate(0.72);
+  filter: brightness(0.8) contrast(1.08) saturate(0.8);
+  padding: var(--space-2);
 }
 
 .card:hover .image {
@@ -70,6 +72,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-height: clamp(72px, 8vw, 110px);
 }
 
 .title {
@@ -80,12 +83,13 @@
   font-weight: 700;
   color: var(--color-text);
   text-align: left;
+  text-wrap: balance;
 }
 
 .spec {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: var(--fs-2);
+  font-size: var(--fs-body-sm);
   color: var(--color-muted);
 }
 
@@ -95,6 +99,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  min-height: 44px;
 }
 
 .price {
@@ -128,6 +133,7 @@
 
   .bottomRow {
     flex-wrap: wrap;
+    align-items: stretch;
   }
 
   .link {

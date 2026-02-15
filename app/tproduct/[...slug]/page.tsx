@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Container } from "@/components/ui";
 import { findProductBySlug, getProductSlugFromHref, products, type Product } from "@/data/products";
 import styles from "./page.module.css";
 
@@ -51,9 +52,9 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   return (
     <main className={styles.page}>
-      <div className="container">
+      <Container>
         <ProductInfo product={product} />
-      </div>
+      </Container>
     </main>
   );
 }

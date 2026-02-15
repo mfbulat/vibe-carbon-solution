@@ -38,6 +38,7 @@
   line-height: 1;
   text-transform: uppercase;
   color: var(--color-text);
+  text-wrap: balance;
 }
 
 .price {
@@ -65,5 +66,24 @@
 @media (max-width: 900px) {
   .card {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .backButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: var(--space-8) 0;
+  }
+
+  .card {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .image {
+    padding: var(--space-3);
   }
 }

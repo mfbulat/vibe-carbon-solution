@@ -1,5 +1,6 @@
 import { type Product } from "@/data/products";
 import { ProductCard } from "@/components/ProductCard";
+import { Container } from "@/components/ui";
 import styles from "./ProductGrid.module.css";
 
 type ProductGridProps = {
@@ -11,7 +12,7 @@ type ProductGridProps = {
 export function ProductGrid({ id, title, products }: ProductGridProps) {
   return (
     <section className={styles.section} id={id}>
-      <div className="container">
+      <Container>
         <h2 className={styles.title}>
           {title.split("\n").map((line) => (
             <span key={line}>{line}</span>
@@ -22,7 +23,7 @@ export function ProductGrid({ id, title, products }: ProductGridProps) {
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
