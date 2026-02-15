@@ -6,7 +6,6 @@
   background: var(--gradient-surface), var(--hero-bg-image);
   background-size: cover;
   overflow: hidden;
-  min-height: clamp(320px, 42vw, 520px);
 }
 
 .card::after {
@@ -25,7 +24,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-bottom: 1px solid var(--color-border);
   background: var(--gradient-surface-soft);
 }
 
@@ -45,12 +43,11 @@
 }
 
 .image {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   z-index: 1;
   transition: transform 220ms ease;
   filter: brightness(0.8) contrast(1.08) saturate(0.8);
-  padding: var(--space-2);
 }
 
 .card:hover .image {
