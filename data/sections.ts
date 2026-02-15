@@ -1,8 +1,8 @@
 export const siteMeta = {
-  title: "Белый ветер",
-  description: "СКЛАДНЫЕ АЛЮМИНИЕВЫЕ ЛОЖИ ДЛЯ BLASER ОТ ПРОИЗВОДИТЕЛЯ",
-  ogImage: "https://static.tildacdn.com/tild3934-3239-4166-b466-643338633766/1200630.jpg",
-  url: "http://belyj-veterstocks.com",
+  title: "Title",
+  description: "Карбоновые детали с промышленным контролем качества",
+  ogImage: "",
+  url: "https://mfbulat.github.io/vibe-carbon-solution",
 };
 
 export const navLinks = [
